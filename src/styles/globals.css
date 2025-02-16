@@ -1,0 +1,56 @@
+@import "tailwindcss";
+/* layers: theme, base, components, utilities */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --text-color: #111111;
+  --dark-gray-bg: #111111;
+  --gray-bg: #f5f5f5;
+  --gray-bg2: #e0e0e0;
+  --gray-bg3: #afafaf;
+  --gray-text: #7e7e7e;
+  --red-snkrs: #ff0017;
+  --button-hover: #ff0017;
+
+  --font-helvetica: "Helvetica Neue", sans-serif;
+}
+
+@layer base {
+  * {
+    transition: all ease-in-out 0.3s;
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: gray var(--dark-gray-bg);
+  }
+  :is(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button {
+    cursor: pointer;
+    background-color: var(--dark-gray-bg);
+  }
+  button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.1);
+  }
+}
+
+@theme {
+  --font-display: var(--font-helvetica);
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}

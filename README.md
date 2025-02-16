@@ -24,26 +24,27 @@ Creado con VSC, con linter y estrandarización de calidad de código mediante Es
 
 <h4>Funcionalidades:</h4>
 
-La app carga una lista de 20 productos de la API Fake Store que se utilizan para creaar un sitio web de e-commerce.
+La app carga una lista de 20 productos de la API Fake Store que se utilizan para crear el sitio web de e-commerce.
 
-Las bases de su composición siguen una estructura enfocada a la modularidad y a la delegación de funcionalidades en las diferentes partes/ elementos que integran la aplicación.
+Las bases de su composición sigue una estructura enfocada en la modularidad y la delegación de responsabilidades en los diferentes elementos que integran la aplicación.
 
-Mantenidendo estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los diferenets recursos.
+Mantenidendo estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los recursos.
 
 <h4>Componetización:</h4>
 
 Se separan en dos jerarquizaciones principales, las vistas y los componentes modulares.
 
-Las vistas, en al carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
-Estan contenidas en un Layout general que se implementa en todo el sitio y los estilos CSS así como su adaptabilidad en diferentes dispositivos y comportamiento responsive están implementados y controlados directamente mediante al framework utility-first de CSS Tailwindcss 4
+Las vistas, en la carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
+Estan contenidas en un Layout general que se implementa en todo el sitio, y los estilos CSS así como la adaptabilidad en diferentes dispositivos y comportamiento responsive están implementados y controlados directamente mediante el framework utility-first de CSS Tailwindcss 4
 
-Los componentes estan creados como módulos y usados en las diferentes secciones de la web.
-Especialmente en el manejo de los productos, donde se han creado componentes de "product card", "products grid", "products slider" y "promo banner" para que sean re utilizables y escalables en caso de crecer al aplicación y ser requeridos a futuro en otras vistas o componentes de la web.
+Los componentes son módulos usados en las diferentes secciones de la web, (siendo este una de las princiipales potencialidades de React.)
+
+Especialmente en el manejo de los productos, donde se han creado componentes de "product card", "products grid", "products slider" y "promo banner" para que sean re utilizables y/o escalables en caso de crecer la aplicación y ser requeridos a futuro en otras vistas o componentes de la web.
 
 <h4>Manejo del estado (modelos, stores, actions/setters):</h4>
 
 El "core del negocio" esta dividido en 3 stores principales: Producto, Carrito y Pedido.
-Las mismas manejan el estado global para todas las vistas y componentes que lo requieran, permitiendo mostrar la información y utilizar los setters pertinentes.
+Estos slices manejan el estado global para todas las vistas y componentes que lo requieran, permitiendo mostrar la información y utilizar los setters pertinentes.
 
 Para esta implementación utilizo la librería Zustand, por su simpleza de implementación, reducido boilerplate y bundle.
 
@@ -51,15 +52,13 @@ Para esta implementación utilizo la librería Zustand, por su simpleza de imple
 
 Persistencia de datos:
 
-Se utiliza una utilidada para manejar local storage a nivel de usario de manera que el store pueda recuperar los productos de un carrito o un pedido en caso de que el usuario recargue o cierre el navegador
+Se utiliza una utilidad para manejar la persistencia de datos en local storage, de manera que el store pueda recuperar los productos de un carrito o un pedido en caso de que el usuario recargue o cierre el navegador
 
 <h4>Potencialidades:</h4>
 
 - El sitio web actualmente verifica un usuario ficticio para procesar el carrito y crear un pedido, pero se puede implementar una gestión de usuario con autentificación y verificación siguiendo la línea de trabajo realizada.
 
 - Admite implementar testings unitarios, end-to-end o de integración
-
-//--------------------------------------------------------////
 
 <h5>Flowchart</h5>
 

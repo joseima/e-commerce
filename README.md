@@ -10,7 +10,7 @@ Para correr la aplicación es necesario contar con Node.js instalado (https://no
 
 1- Clonar el repositorio
 
-2- Dewsde la terminal de comandos y posicionado en la carpeta raiz del proyecto ejectar los comandos:
+2- Desde la terminal de comandos y posicionado en la carpeta raiz del proyecto ejectar los comandos:
 
 - npm install
 
@@ -28,22 +28,22 @@ La app carga una lista de 20 productos de la API Fake Store que se utilizan para
 
 Las bases de su composición siguen una estructura enfocada a la modularidad y a la delegación de funcionalidades en las diferentes partes/ elementos que integran la aplicación.
 
-Mantenidenod estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los diferenets recursos.
+Mantenidendo estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los diferenets recursos.
 
 <h4>Componetización:</h4>
 
-Se separan en dos jerarquizaciones principales, las vistas y los componentes modulares que las componen.
+Se separan en dos jerarquizaciones principales, las vistas y los componentes modulares.
 
-Las vistas en al carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
-Estan contenidas en un Layout general qeu se implementa en todo el sitio y los estilos CSS así como su adaptabilidad y comportamiento responsive y en diferentes dispositivos están implementados y controlados directamente mediante el framework utility-first de CSS Tailwindcss 4
+Las vistas, en al carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
+Estan contenidas en un Layout general que se implementa en todo el sitio y los estilos CSS así como su adaptabilidad en diferentes dispositivos y comportamiento responsive están implementados y controlados directamente mediante al framework utility-first de CSS Tailwindcss 4
 
-Los componentes estan creados como módulos usados en las diferentes secciones de la web.
-Especialemnte en el manejo de los productos donde se han creado componentes de product card, ,products grid, products slider y promo banner para que sean re utilizables y escalables en caso de crecer al aplicación y ser requeridos en otras vistas o componentes de la web en el futuro.
+Los componentes estan creados como módulos y usados en las diferentes secciones de la web.
+Especialmente en el manejo de los productos, donde se han creado componentes de "product card", "products grid", "products slider" y "promo banner" para que sean re utilizables y escalables en caso de crecer al aplicación y ser requeridos a futuro en otras vistas o componentes de la web.
 
-<h4>Manejo del estado (modelos, actions, stores):</h4>
+<h4>Manejo del estado (modelos, stores, actions/setters):</h4>
 
 El "core del negocio" esta dividido en 3 stores principales: Producto, Carrito y Pedido.
-Las mismas manejan el estado global para todas las vistas y componentes que lo requieran permitiendo mostrar la información y utilizar las acciones pertinentes.
+Las mismas manejan el estado global para todas las vistas y componentes que lo requieran, permitiendo mostrar la información y utilizar los setters pertinentes.
 
 Para esta implementación utilizo la librería Zustand, por su simpleza de implementación, reducido boilerplate y bundle.
 

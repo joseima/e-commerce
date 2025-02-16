@@ -1,37 +1,63 @@
 <h1>Ecommerce test site</h1>
 
-# React + TypeScript + Vite
+<h3> React + TypeScript + Vite + Tailwindcss 4 + Zustand </h3>
 
-Sitio e-commerce creado con Vite, Typescript, React 18, Tailwindcss, Zustand y React Router
+App test de e-commerce creado con Vite, Typescript, React 18, Tailwindcss, Zustand y React Router
 
-What to do":
+<h4>Instalación:</h4>
 
-1 - Emmulate the client login
+Para correr la aplicación es necesario contar con Node.js instalado (https://nodejs.org/en)
 
-2- Check our awesome Black Friday promotions
+1- Clonar el repositorio
 
-3- You can filter the products by minimum price and category
+2- Dewsde la terminal de comandos y posicionado en la carpeta raiz del proyecto ejectar los comandos:
 
-4- You can add to the cart the products you like
+- npm install
 
-5- You can remove the selected products form the cart
+- npom run dev
 
-6- You can open the cart resume modal
+Esto creará un servidor local donde correrá la aplicación
 
-7- You can cahnge the mount of the products added
+<h4>Desarrollo:</h4>
 
-8- You can clear the cart
+Creado con VSC, con linter y estrandarización de calidad de código mediante Eslint, Prettier y el mismo tipado estático de Typescript, respetando el contrato de la API y el definido en las interfases de los modelos.
 
-What we have here:
+<h4>Funcionalidades:</h4>
 
-<ul>
-<li>React, Typescript with Vite</li>
-<li>App state managed with useContext and useReducer</li>
-<li>Coding static testing via Eslint, Pretier and  Standrd.js</li>
-<li>CSS with Tailwindcss</li>
-<li>Navigation with React Router</li>
-<li>Local storage hook for the login and cart management</li>
-</ul>
+La app carga una lista de 20 productos de la API Fake Store que se utilizan para creaar un sitio web de e-commerce.
+
+Las bases de su composición siguen una estructura enfocada a la modularidad y a la delegación de funcionalidades en las diferentes partes/ elementos que integran la aplicación.
+
+Mantenidenod estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los diferenets recursos.
+
+<h4>Componetización:</h4>
+
+Se separan en dos jerarquizaciones principales, las vistas y los componentes modulares que las componen.
+
+Las vistas en al carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
+Estan contenidas en un Layout general qeu se implementa en todo el sitio y los estilos CSS así como su adaptabilidad y comportamiento responsive y en diferentes dispositivos están implementados y controlados directamente mediante el framework utility-first de CSS Tailwindcss 4
+
+Los componentes estan creados como módulos usados en las diferentes secciones de la web.
+Especialemnte en el manejo de los productos donde se han creado componentes de product card, ,products grid, products slider y promo banner para que sean re utilizables y escalables en caso de crecer al aplicación y ser requeridos en otras vistas o componentes de la web en el futuro.
+
+<h4>Manejo del estado (modelos, actions, stores):</h4>
+
+El "core del negocio" esta dividido en 3 stores principales: Producto, Carrito y Pedido.
+Las mismas manejan el estado global para todas las vistas y componentes que lo requieran permitiendo mostrar la información y utilizar las acciones pertinentes.
+
+Para esta implementación utilizo la librería Zustand, por su simpleza de implementación, reducido boilerplate y bundle.
+
+<h4>Utilidades:</h4>
+
+Persistencia de datos:
+
+Se utiliza una utilidada para manejar local storage a nivel de usario de manera que el store pueda recuperar los productos de un carrito o un pedido en caso de que el usuario recargue o cierre el navegador
+
+<h4>Potencialidades:</h4>
+
+- El sitio web actualmente verifica un usuario ficticio para procesar el carrito y crear un pedido, pero se puede implementar una gestión de usuario con autentificación y verificación siguiendo la línea de trabajo realizada.
+
+- Admite implementar testings unitarios, end-to-end o de integración
 
 //--------------------------------------------------------////
 

@@ -14,7 +14,7 @@ Para correr la aplicación es necesario contar con Node.js instalado (https://no
 
 - npm install
 
-- npom run dev
+- npm run dev
 
 Esto creará un servidor local donde correrá la aplicación
 

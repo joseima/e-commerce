@@ -1,65 +1,73 @@
-<h1>Ecommerce test site</h1>
 
-<h3> React + TypeScript + Vite + Tailwindcss 4 + Zustand </h3>
+# Ecommerce Test Site
 
-App test de e-commerce creado con Vite, Typescript, React 18, Tailwindcss, Zustand y React Router
+### React + TypeScript + Vite + Tailwindcss 4 + Zustand  
 
-<h4>Instalación:</h4>
+E-commerce test app created with Vite, TypeScript, React 18, Tailwindcss, Zustand, and React Router.
 
-Para correr la aplicación es necesario contar con Node.js instalado (https://nodejs.org/en)
+## Installation:
 
-1- Clonar el repositorio
+To run the application, you need to have Node.js installed (https://nodejs.org/en).
 
-2- Desde la terminal de comandos y posicionado en la carpeta raiz del proyecto ejectar los comandos:
+1. Clone the repository.  
+2. Open a command terminal, navigate to the project's root folder, and run the following commands:  
 
-- npm install
+   ```sh
+   npm install
+   npm run dev
+   ```
 
-- npm run dev
+This will create a local server where the application will run.
 
-Esto creará un servidor local donde correrá la aplicación
+## Development:
 
-<h4>Desarrollo:</h4>
+Developed using VS Code, with linting and code quality standardization through ESLint, Prettier, and TypeScript's own static typing, ensuring compliance with the API contract and the model interfaces.
 
-Creado con VSC, con linter y estrandarización de calidad de código mediante Eslint, Prettier y el mismo tipado estático de Typescript, respetando el contrato de la API y el definido en las interfases de los modelos.
+## Features:
 
-<h4>Funcionalidades:</h4>
+The app loads a list of 20 products from the Fake Store API, which are used to create the e-commerce website.
 
-La app carga una lista de 20 productos de la API Fake Store que se utilizan para crear el sitio web de e-commerce.
+Its structure follows a modular approach, with a focus on delegation of responsibilities across different components of the application.
 
-Las bases de su composición sigue una estructura enfocada en la modularidad y la delegación de responsabilidades en los diferentes elementos que integran la aplicación.
+By maintaining these agile patterns, the goal is to simplify maintenance, optimize performance, and enhance scalability and reusability of resources.
 
-Mantenidendo estos patrones agiles se busca de esta forma simplificar el mantenimiento, optimizar el funcionamiento y favorecer la escalabilidad y reutilización de los recursos.
+## Componentization:
 
-<h4>Componetización:</h4>
+The project is divided into two main hierarchies: **views** and **modular components**.
 
-Se separan en dos jerarquizaciones principales, las vistas y los componentes modulares.
+- **Views** (located in the `"views"` folder) represent the router navigation through the application flow.  
+  - They are wrapped inside a general **Layout**, which applies a consistent design across the site.  
+  - CSS styles, responsiveness, and adaptability across different devices are handled using **TailwindCSS 4**, a utility-first CSS framework.
 
-Las vistas, en la carpeta "views" representan la navegación de el router a través del flujo de la aplicación.
-Estan contenidas en un Layout general que se implementa en todo el sitio, y los estilos CSS así como la adaptabilidad en diferentes dispositivos y comportamiento responsive están implementados y controlados directamente mediante el framework utility-first de CSS Tailwindcss 4
+- **Components** are reusable modules used in different sections of the website (one of React's core strengths).  
+  - Specifically for product management, the app includes components such as:  
+    - **Product Card**  
+    - **Products Grid**  
+    - **Products Slider**  
+    - **Promo Banner**  
+  - These components are designed to be **reusable and scalable**, in case the app expands and requires them in additional views or sections.
 
-Los componentes son módulos usados en las diferentes secciones de la web, (siendo este una de las princiipales potencialidades de React.)
+## State Management (models, stores, actions/setters):
 
-Especialmente en el manejo de los productos, donde se han creado componentes de "product card", "products grid", "products slider" y "promo banner" para que sean re utilizables y/o escalables en caso de crecer la aplicación y ser requeridos a futuro en otras vistas o componentes de la web.
+The **core business logic** is divided into three main stores: **Product, Cart, and Order**.  
+These **slices** manage the global state for all views and components that need it, enabling information display and setter functionality.
 
-<h4>Manejo del estado (modelos, stores, actions/setters):</h4>
+For state management, the app uses **Zustand**, chosen for its **simplicity, minimal boilerplate, and small bundle size**.
 
-El "core del negocio" esta dividido en 3 stores principales: Producto, Carrito y Pedido.
-Estos slices manejan el estado global para todas las vistas y componentes que lo requieran, permitiendo mostrar la información y utilizar los setters pertinentes.
+## Utilities:
 
-Para esta implementación utilizo la librería Zustand, por su simpleza de implementación, reducido boilerplate y bundle.
+**Data Persistence:**  
 
-<h4>Utilidades:</h4>
+A utility function is implemented to **persist data in local storage**, ensuring that the store can restore cart or order items if the user reloads or closes the browser.
 
-Persistencia de datos:
+## Future Potential:
 
-Se utiliza una utilidad para manejar la persistencia de datos en local storage, de manera que el store pueda recuperar los productos de un carrito o un pedido en caso de que el usuario recargue o cierre el navegador
+- The site currently verifies a **mock user** to process the cart and create an order, but **user authentication and verification** can be implemented following the existing structure.  
+- The architecture supports the **implementation of unit, end-to-end, or integration tests**.
 
-<h4>Potencialidades:</h4>
+---
 
-- El sitio web actualmente verifica un usuario ficticio para procesar el carrito y crear un pedido, pero se puede implementar una gestión de usuario con autentificación y verificación siguiendo la línea de trabajo realizada.
-
-- Admite implementar testings unitarios, end-to-end o de integración
-
+Let me know if you need any refinements! 🚀
 <h5>Flowchart</h5>
 
 <img src="./public/e-commerce-FlowChart.svg" alt="E-commerce flowchart" />

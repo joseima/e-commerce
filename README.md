@@ -4,6 +4,8 @@
 
 E-commerce test app created with Vite, TypeScript, React 18, Tailwindcss, Zustand, and React Router.
 
+<a href="https://ecommerce-sketch.netlify.app/" target="_blank">GIVE IT A TRY</a>
+
 ## Installation:
 
 To run the application, you need to have Node.js installed (https://nodejs.org/en).

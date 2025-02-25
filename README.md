@@ -1,7 +1,6 @@
-
 # Ecommerce Test Site
 
-### React + TypeScript + Vite + Tailwindcss 4 + Zustand  
+### React + TypeScript + Vite + Tailwindcss 4 + Zustand
 
 E-commerce test app created with Vite, TypeScript, React 18, Tailwindcss, Zustand, and React Router.
 
@@ -9,8 +8,8 @@ E-commerce test app created with Vite, TypeScript, React 18, Tailwindcss, Zustan
 
 To run the application, you need to have Node.js installed (https://nodejs.org/en).
 
-1. Clone the repository.  
-2. Open a command terminal, navigate to the project's root folder, and run the following commands:  
+1. Clone the repository.
+2. Open a command terminal, navigate to the project's root folder, and run the following commands:
 
    ```sh
    npm install
@@ -35,16 +34,17 @@ By maintaining these agile patterns, the goal is to simplify maintenance, optimi
 
 The project is divided into two main hierarchies: **views** and **modular components**.
 
-- **Views** (located in the `"views"` folder) represent the router navigation through the application flow.  
-  - They are wrapped inside a general **Layout**, which applies a consistent design across the site.  
+- **Views** (located in the `"views"` folder) represent the router navigation through the application flow.
+
+  - They are wrapped inside a general **Layout**, which applies a consistent design across the site.
   - CSS styles, responsiveness, and adaptability across different devices are handled using **TailwindCSS 4**, a utility-first CSS framework.
 
-- **Components** are reusable modules used in different sections of the website (one of React's core strengths).  
-  - Specifically for product management, the app includes components such as:  
-    - **Product Card**  
-    - **Products Grid**  
-    - **Products Slider**  
-    - **Promo Banner**  
+- **Components** are reusable modules used in different sections of the website (one of React's core strengths).
+  - Specifically for product management, the app includes components such as:
+    - **Product Card**
+    - **Products Grid**
+    - **Products Slider**
+    - **Promo Banner**
   - These components are designed to be **reusable and scalable**, in case the app expands and requires them in additional views or sections.
 
 ## State Management (models, stores, actions/setters):
@@ -56,18 +56,17 @@ For state management, the app uses **Zustand**, chosen for its **simplicity, min
 
 ## Utilities:
 
-**Data Persistence:**  
+**Data Persistence:**
 
 A utility function is implemented to **persist data in local storage**, ensuring that the store can restore cart or order items if the user reloads or closes the browser.
 
 ## Future Potential:
 
-- The site currently verifies a **mock user** to process the cart and create an order, but **user authentication and verification** can be implemented following the existing structure.  
+- The site currently verifies a **mock user** to process the cart and create an order, but **user authentication and verification** can be implemented following the existing structure.
 - The architecture supports the **implementation of unit, end-to-end, or integration tests**.
 
 ---
 
-Let me know if you need any refinements! 🚀
 <h5>Flowchart</h5>
 
 <img src="./public/e-commerce-FlowChart.svg" alt="E-commerce flowchart" />

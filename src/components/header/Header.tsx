@@ -20,7 +20,7 @@ export const Header = () => {
           className="text-gray-800 hover:underline gap-2  flex items-center"
         >
           <img src={arrow} alt="Logo" className="h-3" />
-          Visit Nike.com
+          Visit our site
         </a>
         <div className="links flex items-center gap-4">
           <span className="cursor-pointer hover:underline">Help</span>
